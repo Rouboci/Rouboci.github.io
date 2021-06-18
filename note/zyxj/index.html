@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width= device-width ,initial-scale=1.0" />
+		<link rel="icon" href="../../img/favicon.ico"/>	<!-- 引入图标 -->
+		<link rel="preconnect" href="https://fonts.gstatic.com"/> <!-- 预载字体 -->
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;
+		700;900&display=swap" rel="stylesheet"/> <!-- google字体思源黑体 -->
+		<!-- 灰白#d9d6c3  白色字#f4f5f7  梅染#987165 木兰#ad8b3d 小麦#df9464 栀子#dea32c 乳白#d3d7d4 山吹#fcaf17	-->
+		<title>资源详解</title>	<!-- 标题 -->
+	</head>
+	<style type="text/css"> /* 导航栏 */
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			display: block;
+		}
+		html{
+			background-color: #f4f5f7;
+			font-size: 20px;
+			color: #555;
+			font-family: \5b8b\4f53,"verdana, geneva, arial, helvetica, sans-serif";
+		}
+		#navigation_bar{
+			/* background: lightgreen; */
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: 99;
+			background-color: #fff;
+			flex: 0;
+			height: 4rem;
+			/* margin: 0 auto; */
+			box-shadow: 0 0 15px #555555;
+		}
+		#navigation_bar div{
+			width: 60rem;
+			height: 100%;
+			/* background-color: aqua; */
+			margin: 0 auto;
+		}
+		#navigation_bar div ul{
+			list-style: none;
+			display: flex;
+			height: 100%;
+			align-items: center;
+		}
+		.nav_part{
+			text-align: center;
+		}
+		#nav_part1{
+			flex: 0 0 3.7rem;
+			margin-left: 0.5rem;
+			/* background-color: #90EE90; */
+		}
+		#nav_part2{
+			flex: auto;
+			cursor: default;
+		}
+		#nav_part3{
+			line-height: 1.2rem;
+			flex: 0 0 3.7rem;
+			margin-right: 0.5rem;
+			background-color:#987165; /* 梅染 */
+			color: #F4F5F7;
+			cursor: pointer;
+			font-size: 0.9rem;
+			box-shadow: 0 1px 3px #555;
+		}
+		#logo{
+			width: 3.2rem;
+		}
+		#none{
+			display: initial;
+			font-size: 0.9rem;
+	
+		}
+		#btn_login{
+			display: initial;
+		}
+	</style>
+	<style type="text/css">/* main */
+		#main{
+			margin: 80px auto 0px auto;
+			width: 1000px;
+		}
+		#title_box{
+			font-size: 36px;
+			font-weight: bold;
+			padding: 30px 0 40px 0;
+			text-align: left;
+			font-family: 'Noto Sans SC', sans-serif;
+			letter-spacing: 3px;
+			/* font-family: initial; */ /* 测试 */
+		}
+		#meta{
+			font-size: 14px;
+			font-weight: 300;
+			font-family: initial;
+			margin-top: 5px;
+		}
+		#content_box{
+		  text-align: left;
+		  padding-bottom: 10px;
+		}
+		.h{
+			font-family: initial;
+			font-size: 20px;
+			font-weight: 500;
+			margin: 10px 0;
+			
+		}
+		.content{
+			letter-spacing: 1px;
+			font-family: initial;
+			font-size: 16px;
+			font-weight: 300;
+		}
+	</style>
+	<style type="text/css"> /* 页脚 */
+		#footer{
+		}
+		#footer_box{
+			width: 100%;
+			background-color: #987165;
+			height: 45px;
+		}
+	</style>
+	<body>
+		<div id="navigation_bar">
+			<div id="nav_bar">
+				<ul>
+					<li id="nav_part1" class="nav_part">
+						<a href="http://ruidepice.live">
+							<img id="logo" src="../../img/logo1.png"/>
+						</a>
+					</li>
+					<li id="nav_part2" class="nav_part">
+						<div id="none">ovo</div>
+					</li>
+					<li id="nav_part3" class="nav_part" onclick="login()">
+						<div id="btn_login">登录</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="main">
+			<div id="title_box">
+				资源详解
+				<div id="meta">
+					2021年6月18日 五月初九
+				</div>
+			</div>
+			<div id="content_box">
+				<div class="h">
+					「文件名」
+				</div>
+				<p class="content">
+					BDRip-蓝光压制<br>
+					MX-东京都会电视台，即TV版<br>
+					[Nimei-Raws]-国外字幕组用“[]”，Raws是生肉的意思<br>
+					【華盟字幕社】-国内字幕组用“【】”<br>
+					FLAC-无损<br>
+					MKV-视频音频字幕等的容器<br>
+					x264-基于H.264标准的免费开源视频编码器  <br> 
+					AVC-高级视频编码 =H.264<br>
+					GB-“国标”，简体<br>
+					BIG5-繁体<br>
+					Vol-即Volume，意为“卷”<br>
+					caption-字幕<br>
+					1440x1080[16:9]-a1080<br>
+					10bit-位深<br>
+					BDMV-蓝光原盘<br>
+					BDremux-将BD以接近无损的方式提取<br>
+					ISO-是镜像文件的一种，类似于压缩包<br>
+					BD-Box-全集，包含了所有的Vol，一般是老番要直接出BD<br>
+					特典-附加的内容<br>
+					Non Telop-无字幕<br>
+					ver.？&v？-一般会在OP更迭的时候出现<br>
+					OA版-电视上播出的版本<br>
+					Renewal版-经过了数码修复以及增加了一些删节的镜头<br>
+					特别版-可能画面有裁剪、画质升级<br>
+					FHD-Full HD，全高清，狭义指1920x1080<br>
+					HD-高清<br>
+					SD-标清<br>
+					Ultra HD-超高清<br>
+				</p>
+				<div class="h">
+					「关键展开」
+				</div>
+				<p class="content">
+					NCOP、NCED-无字片头和片尾，具体指视频中的人员名单，非字幕<br>
+					NCOP比较常见的说法-NCOP/Creditless OP/Creditless Opening/Cleaning Opening/Textless Opening<br>
+					OPED中出现的ep-全称episode，意思是“集”<br>
+					标清-狭义指480p<br>
+					高清-狭义指720p<br>
+					全高清-狭义指1080p<br>
+					超高清-4k（2160p）、8k（4320p）分辨率<br>
+					CBR-静态码率，容易导致码率浪费<br>
+					VBR-动态码率<br>
+					PNG和JPG的区别-PNG带透明通道，JPG不带<br>
+					PNG-8-透明通道只能为255或0，即透明通道只能为不透明和透明<br>
+					PNG-24-透明通道可以部分透明<br>
+					位深10bit的优势-无色带，防色块，保细节，高压缩<br>
+					Hi10P&Hi8P-10bit&8bit<br>
+				</p>
+				<div class="h">
+					「文件夹」
+				</div>
+				<p class="content">
+					STREAM-流，视频流，其中的.m2ts格式是可以直接播放的视频格式<br>
+					CERTIFICATE-许可证<br>
+				</p>
+				<div class="h">
+					「文件」
+				</div>
+				<p class="content">
+					index.bdmv-存储原盘目录信息<br>
+					MovieObject.bdmv-存储播放命令<br>
+					id.bdmv-证书文件<br>
+				</p>
+				<div class="h">
+					「文件格式」
+				</div>
+				<p class="content">
+					BDMV：<br>
+					.clpi-即clip-info，储存影片信息的文件，与后面的.m2ts文件相对应<br>
+					.mpls-即mediaplaylist，储存着播放列表<br>
+					.ts-与.m2ts格式差不多<br>
+					
+					BD、TV、DVD<br>
+					TV：<br>
+					免费电视台（有赞助商）：有和谐,例如圣光和暗牧<br>
+					付费电视台：无和谐<br>
+					
+					DVD画质普遍低于BD，但价格也低<br>
+				</p>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer_box"></div>
+		</div>
+	</body>
+</html>

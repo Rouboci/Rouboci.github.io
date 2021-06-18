@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width= device-width ,initial-scale=1.0" />
+		<link rel="icon" href="../../img/favicon.ico"/>	<!-- 引入图标 -->
+		<link rel="preconnect" href="https://fonts.gstatic.com"/> <!-- 预载字体 -->
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;
+		700;900&display=swap" rel="stylesheet"/> <!-- google字体思源黑体 -->
+		<!-- 灰白#d9d6c3  白色字#f4f5f7  梅染#987165 木兰#ad8b3d 小麦#df9464 栀子#dea32c 乳白#d3d7d4 山吹#fcaf17	-->
+		<title>Android Studio增加menu项</title>	<!-- 标题 -->
+	</head>
+	<body>
+		<style type="text/css"> /* 导航栏 */
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				display: block;
+			}
+			html{
+				overflow: scroll;
+				overflow-x: hidden;
+				background-color: #f4f5f7;
+				font-size: 20px;
+				color: #555;
+				font-family: \5b8b\4f53,"verdana, geneva, arial, helvetica, sans-serif";
+			}
+			#navigation_bar{
+				/* background: lightgreen; */
+				position: fixed;
+				top: 0;
+				right: 0;
+				left: 0;
+				z-index: 99;
+				background-color: #fff;
+				flex: 0;
+				height: 4rem;
+				/* margin: 0 auto; */
+				box-shadow: 0 0 15px #555555;
+			}
+			#navigation_bar div{
+				width: 60rem;
+				height: 100%;
+				/* background-color: aqua; */
+				margin: 0 auto;
+			}
+			#navigation_bar div ul{
+				list-style: none;
+				display: flex;
+				height: 100%;
+				align-items: center;
+			}
+			.nav_part{
+				text-align: center;
+			}
+			#nav_part1{
+				flex: 0 0 3.7rem;
+				margin-left: 0.5rem;
+				/* background-color: #90EE90; */
+			}
+			#nav_part2{
+				flex: auto;
+				cursor: default;
+			}
+			#nav_part3{
+				line-height: 1.2rem;
+				flex: 0 0 3.7rem;
+				margin-right: 0.5rem;
+				background-color:#987165; /* 梅染 */
+				color: #F4F5F7;
+				cursor: pointer;
+				font-size: 0.9rem;
+				box-shadow: 0 1px 3px #555;
+			}
+			#logo{
+				width: 3.2rem;
+			}
+			#none{
+				display: initial;
+				font-size: 0.9rem;
+		
+			}
+			#btn_login{
+				display: initial;
+			}
+		</style>
+		<style type="text/css">/* main */
+			#main{
+				margin: 80px auto 0px auto;
+				width: 1000px;
+			}
+			#title_box{
+				font-size: 36px;
+				font-weight: bold;
+				padding: 30px 0 40px 0;
+				text-align: left;
+				font-family: 'Noto Sans SC', sans-serif;
+				letter-spacing: 3px;
+				/* font-family: initial; */ /* 测试 */
+			}
+			#meta{
+				font-size: 14px;
+				font-weight: 300;
+				font-family: initial;
+				margin-top: 5px;
+			}
+			#content_box{
+			  text-align: left;
+			  padding-bottom: 10px;
+			}
+			.h{
+				font-family: initial;
+				font-size: 20px;
+				font-weight: 500;
+				margin: 10px 0;
+				
+			}
+			.content{
+				letter-spacing: 1px;
+				font-family: initial;
+				font-size: 16px;
+				font-weight: 300;
+			}
+		</style>
+		<style type="text/css"> /* 页脚 */
+			#footer{
+				
+			}
+			#footer_box{
+				width: 100%;
+				background-color: #987165;
+				height: 45px;
+				bottom: 0;
+				position: absolute;
+			}
+		</style>
+		<body>
+			<div id="navigation_bar">
+				<div id="nav_bar">
+					<ul>
+						<li id="nav_part1" class="nav_part">
+							<a href="http://ruidepice.live">
+								<img id="logo" src="../../img/logo1.png"/>
+							</a>
+						</li>
+						<li id="nav_part2" class="nav_part">
+							<div id="none">ovo</div>
+						</li>
+						<li id="nav_part3" class="nav_part" onclick="login()">
+							<div id="btn_login">登录</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="main">
+				<div id="title_box">
+					Android Studio增加menu项
+					<div id="meta">
+						2021年6月18日 五月初九
+					</div>
+				</div>
+				<div id="content_box">
+					<div class="h">
+						创建一个新的menu项所需要的：
+					</div>
+					<p class="content">
+						1.新建SettingsFragment.kt——空页面 路径：ui/settings/..<br>
+						2.新建SettingsViewModel.kt——空页面上的字 路径：ui/settings/..<br>
+						3.修改MainActivity.kt——添加activity（也许？）路径：ui/MainActivity.kt<br>
+						4.修改mobile_navigation.xml——添加新的fragment页面(中转？) 路径：res/navigation/mobile_navigation.xml<br>
+						5.修改activity_main_drawer.xml——添加新的menu项，包含图标和文字 路径：res/menu/activity_main_drawer.xml<br>
+						6.修改strings.xml——添加新的字符串 路径：res/values/strings.xml<br>
+					</p>
+					<div class="h">
+						由简单到繁琐，我们给这些步骤排排序。
+					</div>
+					<p class="content">
+						1.修改strings.xml——添加新的字符串 路径：res/values/strings.xml<br>
+						2.修改activity_main_drawer.xml——添加新的menu项，包含图标和文字 路径：res/menu/activity_main_drawer.xml<br>
+						2.5当然要建个setting文件夹了qwq<br>
+						3.新建SettingsFragment.kt——空页面 路径：ui/settings/..<br>
+						4.新建SettingsViewModel.kt——空页面上的字 路径：ui/settings/..<br>
+						5.修改mobile_navigation.xml——添加新的fragment页面(中转？) 路径：res/navigation/mobile_navigation.xml<br>
+						6.修改MainActivity.kt——添加activity（也许？）路径：ui/MainActivity.kt<br>
+					</p>
+					<div class="h">
+						忘了一个
+					</div>
+					<p class="content">
+						在layout中新建fragamen_settings.xml
+					</p>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="footer_box"></div>
+			</div>
+	</body>
+</html>
